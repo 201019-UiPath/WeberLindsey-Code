@@ -1,4 +1,5 @@
 ﻿using System;
+using HeroesLib;
 
 namespace HeroesUI
 {
@@ -6,7 +7,10 @@ namespace HeroesUI
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+
+            Hero obj = new Hero();
+            Console.WriteLine($"{obj.id} {obj.name}");
+
         }
     }
 }
