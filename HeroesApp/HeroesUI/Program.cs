@@ -45,9 +45,23 @@ namespace HeroesUI
 
             obj.ja[0][0] = 10; //initialize value of first row and first column to 10
             obj.ja[1][2] = 15;
-            
+
+            int[,,] td = new int[2,3,4];
+            Console.WriteLine($"Dimension of the array - {td.Rank}D");
+            Console.WriteLine($"Number of elements in the Array - {td.Length}");
+
             Console.Write(obj.ja.Rank); //rank is the dimension of the array
             Console.Write(obj.ja.Length); //length is elements of the arrays
+
+            //Loop through the jagged array
+            foreach (var rows in obj.ja) { //looping through all rows
+
+                //looping through all columns of every row
+                for(int i = 0; i < rows.Length; i++){
+                Console.Write($" {rows[i]} ");
+                }
+                Console.WriteLine();
+            }
             #endregion
 
         }
