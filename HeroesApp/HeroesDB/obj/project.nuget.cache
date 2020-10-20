@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "Ucb7UmI6Cq3+b1r2M/CgfyAfi9z3AfZ1eCgfWesch+6P5G+3J42omMjMxG8JxO+XW+pW3f8pLx49qG9JBjm9iQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Lin\\Documents\\Revature\\WeberLindsey-Code\\HeroesApp\\HeroesDB\\HeroesDB.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Lin\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Lin\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
