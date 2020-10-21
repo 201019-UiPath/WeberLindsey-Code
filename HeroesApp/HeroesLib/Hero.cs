@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace HeroesLib
 {
@@ -38,10 +39,41 @@ namespace HeroesLib
 
         public string name { get; set; }
 
-        public string[] superPowers = new string[10]; //1-D array
+        #region Arrays
+        //public string[] superPowers = new string[10]; //1-D array
+        //public int[][] ja = new int[3][]; //Jagged array
+        #endregion
 
-        public int[][] ja = new int[3][]; //Jagged array
-        
+        // public static List<string> superPowers = new List<string>();
+
+        public static Stack<string> superPowers = new Stack<string>(); //LIFO
+
+        public Hero() {
+            superPowers.Push("Strength"); //Use Add when using Lists, Push when using Stacks
+            superPowers.Push("Flying");
+            superPowers.Push("Invisibility");
+            superPowers.Push("X-Ray Vision");
+        }
+
+        //Method
+        public static IEnumerable<string> GetSuperPowers() {
+           return superPowers;
+        }
+
+        public void AddSuperPowers(string superPower) {
+            if(superPower != null && superPower != "") {
+                superPowers.Push(superPower);
+            }
+        }
+
+        public void RemoveSuperPowers(/*string superPower*/) {
+            // if(superPowers.Contains(superPower)) {
+                // superPowers.Remove(superPower); 
+            // }
+
+            superPowers.Pop(); // Use pop when using Stacks, will remove item from the top
+        }
+
     }
     #endregion
 }

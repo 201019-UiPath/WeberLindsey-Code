@@ -7,6 +7,9 @@ namespace HeroesUI
     {
         static void Main(string[] args)
         {
+
+            Hero obj = new Hero();
+
             #region default constructor
             /*Hero obj = new Hero();
             Console.WriteLine($"{obj.id} {obj.name}");*/
@@ -24,7 +27,7 @@ namespace HeroesUI
             #endregion
 
             #region accessing 1-D arrays
-            Hero obj = new Hero();
+            
 
             /*Console.Write("Please enter your hero ID: ");
             obj.Id = Int32.Parse(Console.ReadLine());
@@ -39,7 +42,7 @@ namespace HeroesUI
             #endregion
 
             #region Accessing Jagged arrays
-            obj.ja[0] = new int[2]; //first column
+            /*obj.ja[0] = new int[2]; //first column
             obj.ja[1] = new int[3]; //second column
             obj.ja[2] = new int[1]; //third column
 
@@ -61,7 +64,17 @@ namespace HeroesUI
                 Console.Write($" {rows[i]} ");
                 }
                 Console.WriteLine();
-            }
+            }*/
+            #endregion
+
+            #region List<T> Example
+            // Console.WriteLine("Please enter the super power to be removed: ");
+            // string sp = Console.ReadLine();
+            // Hero.superPowers.Remove(sp);
+
+            foreach(var superPowers in Hero.GetSuperPowers()) {
+                Console.WriteLine(superPowers);
+            } 
             #endregion
 
         }
