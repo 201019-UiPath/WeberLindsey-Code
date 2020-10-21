@@ -80,7 +80,6 @@ namespace HeroesUI
                 // Console.WriteLine($"{superHeroes.Key}  {superHeroes.Value}");
                 Console.WriteLine($"{superHeroes.Key}  {Hero.hideOuts[superHeroes.Key]}"); //can also do this way
             }
-
             #endregion
 
         }
