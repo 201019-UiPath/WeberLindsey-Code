@@ -1,5 +1,6 @@
 ﻿using System;
 using HeroesLib;
+using HeroesUI.Menus;
 
 namespace HeroesUI
 {
@@ -75,11 +76,16 @@ namespace HeroesUI
             //     Console.WriteLine(superPowers);
             // } 
 
-            Console.WriteLine("Super Hero     Hideout");
+            /*Console.WriteLine("Super Hero     Hideout");
             foreach(var superHeroes in Hero.hideOuts) {
                 // Console.WriteLine($"{superHeroes.Key}  {superHeroes.Value}");
                 Console.WriteLine($"{superHeroes.Key}  {Hero.hideOuts[superHeroes.Key]}"); //can also do this way
-            }
+            }*/
+            #endregion
+
+            #region Calling Hero menu
+            IMenu startMenu = new MainMenu();
+            startMenu.Start();
             #endregion
 
         }

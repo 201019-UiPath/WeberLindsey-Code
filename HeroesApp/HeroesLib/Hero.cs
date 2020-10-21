@@ -3,7 +3,6 @@ using System.Collections.Generic;
 
 namespace HeroesLib
 {
-
     #region old way of creating class members
     /*public class Hero
     {
@@ -46,7 +45,7 @@ namespace HeroesLib
         #region Collections
         // public static List<string> superPowers = new List<string>();
         public static Stack<string> superPowers = new Stack<string>(); //LIFO
-        public static Dictionary<string, string> hideOuts = new Dictionary<string, string>();
+        // public static Dictionary<string, string> hideOuts = new Dictionary<string, string>();
 
         public Hero() {
             superPowers.Push("Strength"); //Use Add when using Lists, Push when using Stacks
@@ -54,9 +53,9 @@ namespace HeroesLib
             superPowers.Push("Invisibility");
             superPowers.Push("X-Ray Vision");
 
-            hideOuts.Add("Thor", "Asgard");
-            hideOuts.Add("Batman", "Bat Cave");
-            hideOuts.Add("Superman", "Fortress of Solitude");
+            // hideOuts.Add("Deadpool", "Everywhere");
+            // hideOuts.Add("Batman", "Bat Cave");
+            // hideOuts.Add("Superman", "Fortress of Solitude");
         }
 
         //Method
