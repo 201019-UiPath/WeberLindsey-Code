@@ -36,7 +36,6 @@ namespace HeroesLib
     #region modern way of creating class members
     public class Hero{
         public int Id { get; set; }
-
         public string name { get; set; }
 
         #region Arrays
@@ -44,15 +43,20 @@ namespace HeroesLib
         //public int[][] ja = new int[3][]; //Jagged array
         #endregion
 
+        #region Collections
         // public static List<string> superPowers = new List<string>();
-
         public static Stack<string> superPowers = new Stack<string>(); //LIFO
+        public static Dictionary<string, string> hideOuts = new Dictionary<string, string>();
 
         public Hero() {
             superPowers.Push("Strength"); //Use Add when using Lists, Push when using Stacks
             superPowers.Push("Flying");
             superPowers.Push("Invisibility");
             superPowers.Push("X-Ray Vision");
+
+            hideOuts.Add("Thor", "Asgard");
+            hideOuts.Add("Batman", "Bat Cave");
+            hideOuts.Add("Superman", "Fortress of Solitude");
         }
 
         //Method
@@ -72,8 +76,8 @@ namespace HeroesLib
             // }
 
             superPowers.Pop(); // Use pop when using Stacks, will remove item from the top
+            #endregion
         }
-
     }
     #endregion
 }

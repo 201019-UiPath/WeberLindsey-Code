@@ -7,7 +7,6 @@ namespace HeroesUI
     {
         static void Main(string[] args)
         {
-
             Hero obj = new Hero();
 
             #region default constructor
@@ -67,14 +66,21 @@ namespace HeroesUI
             }*/
             #endregion
 
-            #region List<T> Example
+            #region List<T> Example & Stack<T> & Dictionary<Tkey, Value> Example
             // Console.WriteLine("Please enter the super power to be removed: ");
             // string sp = Console.ReadLine();
             // Hero.superPowers.Remove(sp);
 
-            foreach(var superPowers in Hero.GetSuperPowers()) {
-                Console.WriteLine(superPowers);
-            } 
+            // foreach(var superPowers in Hero.GetSuperPowers()) {
+            //     Console.WriteLine(superPowers);
+            // } 
+
+            Console.WriteLine("Super Hero     Hideout");
+            foreach(var superHeroes in Hero.hideOuts) {
+                // Console.WriteLine($"{superHeroes.Key}  {superHeroes.Value}");
+                Console.WriteLine($"{superHeroes.Key}  {Hero.hideOuts[superHeroes.Key]}"); //can also do this way
+            }
+
             #endregion
 
         }
