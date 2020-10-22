@@ -63,20 +63,21 @@ namespace HeroesLib
            return superPowers;
         }
 
-        public void AddSuperPowers(string superPower) {
-            if(superPower != null && superPower != "") {
-                superPowers.Push(superPower);
-            }
-        }
-
+        
         public void RemoveSuperPowers(/*string superPower*/) {
             // if(superPowers.Contains(superPower)) {
                 // superPowers.Remove(superPower); 
             // }
-
             superPowers.Pop(); // Use pop when using Stacks, will remove item from the top
             #endregion
         }
+
+        public void AddSuperPowers(string superPower) {
+            if(superPower != null && superPower != "") {
+                superPowers.Push(superPower);
+            } else throw new ArgumentException("Super power shouldn't be null");
+        }
+
     }
     #endregion
 }
