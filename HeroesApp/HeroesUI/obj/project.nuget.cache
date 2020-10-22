@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "nIyw6dODRkXwuISFgdn/Wg8n28EIizDe+ngheCiXgbVH3f3ixyO4ul6+i9O8HZzM7s5j4X2ZLwgRjXtZiFuLCA==",
+  "dgSpecHash": "1W4TUOUvZXy+AaW3MVU9LJkPNx/T/F3NIfRd/8L9OnoYwjfeS06qTAETZXeTjwV5dTihFm2FBgJCXDg3i0jq4Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\Lin\\Documents\\Revature\\WeberLindsey-Code\\HeroesApp\\HeroesUI\\HeroesUI.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Lin\\.nuget\\packages\\system.text.json\\4.7.2\\system.text.json.4.7.2.nupkg.sha512"
+  ],
   "logs": []
 }
