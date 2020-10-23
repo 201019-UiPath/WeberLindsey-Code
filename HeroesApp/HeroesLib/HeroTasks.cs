@@ -9,7 +9,7 @@ namespace HeroesLib
     {
         string path = "../SuperPowers";
 
-        public event HeroDel workDone;
+        public event HeroDel workDone; //publisher
 
         public async void DoWork() {
             System.Console.WriteLine("Work started...");
