@@ -88,30 +88,35 @@ namespace HeroesUI
             // startMenu.Start();
             #endregion
 
-            #region Delegate, Anonymous methods, Lambda
             HeroTasks heroTasks = new HeroTasks();
 
+            #region Delegate, Anonymous methods, Lambda
             // HeroDel del = new HeroDel(heroTasks.GetPowers);
-            Action del = new Action(heroTasks.GetPowers);
+            // Action del = new Action(heroTasks.GetPowers);
             // Func<string, string> fd = new Func<string,string>(some method);
             // Predicate<string> predicate = new Predicate<string>(some method);
-            del += heroTasks.DoWork; // += subscribe to a method
-            del += heroTasks.ManageLife;
-            del();
-            del -= heroTasks.ManageLife; // -= unsubscribe
-            del();
+            // del += heroTasks.DoWork; // += subscribe to a method
+            // del += heroTasks.ManageLife;
+            // del();
+            // del -= heroTasks.ManageLife; // -= unsubscribe
+            // del();
 
             //Anonymous methods
-            Action<string> am = delegate(string name) {
-                System.Console.WriteLine("Hello anonymous");
-            };
-            am("Lindsey");
+            // Action<string> am = delegate(string name) {
+                // System.Console.WriteLine("Hello anonymous");
+            // };
+            // am("Lindsey");
 
             //Lambda Expression - shorthand notation to anonymous methods
-            Action result = () => System.Console.WriteLine("Hello Lambda");
-            result();
+            // Action result = () => System.Console.WriteLine("Hello Lambda");
+            // result();
             #endregion
 
+            #region  Async VS synchronous programming
+            heroTasks.DoWork();
+            heroTasks.ManageLife();
+            Console.Read(); //Holds the stream until a key is pressed (& waits for the other thread instead of ending execution)
+            #endregion
         }
     }
 }

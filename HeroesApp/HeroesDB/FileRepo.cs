@@ -20,7 +20,8 @@ namespace HeroesDB
        /// </summary>
        /// <param name="hero"></param>
        public async void AddHeroAsync(Hero hero) {
-           using(FileStream fs =  new FileStream(filepath, FileMode.Append, FileAccess.Write)) {
+        //    using(FileStream fs =  new File.Create(filepath)) {
+            using(FileStream fs =  new FileStream(filepath, FileMode.Append, FileAccess.Write)) {
                await JsonSerializer.SerializeAsync(fs, hero);
                System.Console.WriteLine("Hero is being written to file");
            }

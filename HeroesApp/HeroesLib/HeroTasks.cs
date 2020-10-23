@@ -1,3 +1,6 @@
+using System;
+using System.Threading.Tasks;
+
 namespace HeroesLib
 {
     public delegate void HeroDel();
@@ -6,8 +9,11 @@ namespace HeroesLib
     {
         string path = "../SuperPowers";
 
-        public void DoWork() {
+        public async void DoWork() {
+            System.Console.WriteLine("Work started...");
+            await Task.Run( new Action(GetPowers));
             System.Console.WriteLine("Saving humanity is my work");
+            System.Console.WriteLine("Work Finished");
         }
 
         public void ManageLife() {
@@ -15,8 +21,10 @@ namespace HeroesLib
         }
 
         public void GetPowers() {
+            System.Console.WriteLine("Getting powers");
+            System.Threading.Thread.Sleep(6000);
             string superPower = System.IO.File.ReadAllText(path);
-            System.Console.WriteLine(superPower);
+            System.Console.WriteLine($"Power obtained {superPower}");
         }
         
     }
