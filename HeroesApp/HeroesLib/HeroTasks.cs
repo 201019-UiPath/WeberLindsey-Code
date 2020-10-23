@@ -9,11 +9,20 @@ namespace HeroesLib
     {
         string path = "../SuperPowers";
 
+        public event HeroDel workDone;
+
         public async void DoWork() {
             System.Console.WriteLine("Work started...");
             await Task.Run( new Action(GetPowers));
             System.Console.WriteLine("Saving humanity is my work");
             System.Console.WriteLine("Work Finished");
+            OnWorkDone();
+        }
+
+        public void OnWorkDone() {
+            workDone?.Invoke();
+
+            // if(workDone != null) { workDone(); }//Raising the event
         }
 
         public void ManageLife() {

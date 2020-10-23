@@ -82,7 +82,6 @@ namespace HeroesUI
                 Console.WriteLine($"{superHeroes.Key}  {Hero.hideOuts[superHeroes.Key]}"); //can also do this way
             }*/
             #endregion
-
             #region Calling Hero menu
             // IMenu startMenu = new MainMenu();
             // startMenu.Start();
@@ -113,6 +112,11 @@ namespace HeroesUI
             #endregion
 
             #region  Async VS synchronous programming
+            //Subscribing to publisher
+            heroTasks.workDone += EmailService.SendEmail;
+            heroTasks.workDone += TextMessageService.SendText;
+            heroTasks.workDone += PushNotification.SendPushNotification;
+
             heroTasks.DoWork();
             heroTasks.ManageLife();
             Console.Read(); //Holds the stream until a key is pressed (& waits for the other thread instead of ending execution)
