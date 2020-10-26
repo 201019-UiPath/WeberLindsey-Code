@@ -83,8 +83,8 @@ namespace HeroesUI
             }*/
             #endregion
             #region Calling Hero menu
-            // IMenu startMenu = new MainMenu();
-            // startMenu.Start();
+            IMenu startMenu = new MainMenu();
+            startMenu.Start();
             #endregion
 
             HeroTasks heroTasks = new HeroTasks();
@@ -113,13 +113,13 @@ namespace HeroesUI
 
             #region  Async VS synchronous programming
             //Subscribing to publisher
-            heroTasks.workDone += EmailService.SendEmail;
+            /*heroTasks.workDone += EmailService.SendEmail;
             heroTasks.workDone += TextMessageService.SendText;
             heroTasks.workDone += PushNotification.SendPushNotification;
 
             heroTasks.DoWork();
             heroTasks.ManageLife();
-            Console.Read(); //Holds the stream until a key is pressed (& waits for the other thread instead of ending execution)
+            Console.Read(); //Holds the stream until a key is pressed (& waits for the other thread instead of ending execution)*/
             #endregion
         }
     }
