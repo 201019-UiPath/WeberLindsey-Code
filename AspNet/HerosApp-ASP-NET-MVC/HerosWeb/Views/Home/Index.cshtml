@@ -1,0 +1,25 @@
+﻿@model SuperHero
+
+@{
+    ViewData["Title"] = "Home Page";
+    //var hero = ViewData["SuperHeroName"] as SuperHero;
+    //var hero = ViewBag.SuperHeroName;
+    //Layout="./"
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to Heros App</h1>
+    <!-- <p>Super Hero Name : @*ViewData["SuperHeroName"]*@</p> //Accessing data from controller -->
+    <!-- <p>Super Hero Name : @*ViewBag.SuperHeroName*@</p> -->
+    <!-- <p>Super Hero Name : @*hero.Id*@</p> -->
+    <!-- <p>Super Hero Name : @*hero.alias*@</p> -->
+    <p>Super Hero Name : @ViewBag.Id</p>
+    <p>Super Hero Name : @ViewBag.name</p>
+</div>
+
+@*@section ExtraItems {
+<p>@Model.Id - @Model.name </p>
+}*@
+
+@Html.Partial("_DateTimePartial")
+@*<partial name="_DateTimePartial"></partial>*@
