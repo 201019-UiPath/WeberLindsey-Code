@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Contains meta data
+        Line what character set to use
+        The title of your tab/window/bookmark -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style>
+            li {
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+        </style>
+
+        <link rel="stylesheet" href="style.css">
+
+        <title>Hello Web</title>
+    </head>
+
+    <body>
+        <!-- 
+            Contains the actual content of your webpage
+            Like the stuff to fill the white space
+            what your end user interacts with
+         -->
+         <h1>Lecture on HTML, CSS, BOOTstrapJS</h1>
+         <div class="container">
+             <h1>HTML</h1>
+             <h2>Some Common Elements</h2>
+             <div class="container">This is a div tag, generic block element</div>
+             <div class="container">It takes some vertical space</div>
+             <div class="container">
+                 <span>generic inline element, does not take vertical space</span>
+                 <span>Exists side by side with other elemnents if space permits</span>
+             </div>
+
+             <div class="container">
+                 <p>This is a paragraph tag, its also block</p>
+                 <article>This is an article, semantic paragraph</article>
+                 <article>takes less vertical space than paragraph</article>
+                 <a href="https://agilemanifesto.org/">This is our page to beat. Reference provided by anchor tag</a>
+             </div>
+
+             <div class="container">
+                 <header>Difference between head, header and heading</header>
+                 <p>Head tag encapsulates meta info about your html resource</p>
+                 <p>The header is a semantic element that describes a header</p>
+                 <p>The heading is a way of formatting how things are presented, like a paragraph heading, has levels</p>
+                 <h1>Level 1</h1>
+                 <h2>Level 2</h2>
+                 <h3>Level 3</h3>
+                 <h4>Level 4</h4>
+                 <h5>Level 5</h5>
+                 <h6>Level 6</h6>
+                 <p>Why even use header element?</p>
+                 <p>
+                     We don't use tags to make words appear <b>bolder</b> or <i>italicized</i> because HTML shouldn't describe how things look; just what they are
+                 </p>
+             </div>
+
+             <div class="container">
+                 <header>Presenting a collectiion of stuff to end user</header>
+                 <p>
+                     Lists
+                     <ol>
+                         <li>This is an ordered list</li>
+                         <li>Notice the numbers </li>
+                     </ol>
+
+                     <ul>
+                         <li>This is unordered</li>
+                         <li>Notice the lack of numbers</li>
+                     </ul>
+                 </p>
+
+                 <p>
+                     <!-- table>body>tr>td*2 to have it make your table for you in VS code -->
+                     <table class="table">
+                         <thead>
+                             <th>Name</th>
+                             <th>Favorite Color</th>
+                         </thead>
+                         <tbody>
+                             <tr>
+                                 <td>Marielle</td>
+                                 <td>Green</td>
+                             </tr>
+                             <tr>
+                                <td>Pushpinder</td>
+                                <td>Red</td>
+                            </tr>
+                         </tbody>
+                     </table>
+                 </p>
+             </div>
+
+             <div class="container">
+                 <h2>Images</h2>
+                 <img src="potato">
+                 Notice how image tag is self closing
+             </div>
+
+             <div class="containers">
+                 <h2>Attributes</h2>
+                 <div id="attributeID" class="container">
+                    <!-- div#attributeID.container -->
+                    <p>
+                        Somee tags like the img tag use attributes to define the value of what they're presenting
+                        <br>
+                        href attribute of the anbchor tag tells you where the anchor tag leads
+                        You can also use them to identify your elements
+
+                        Ways to identify an element using attributes
+                        <ul>
+                            <li>ID - unique way to identify an element</li>
+                            <li>Class - way to identify multiple elements</li>
+                        </ul>
+
+                        <p>
+                            You need to identify them to be able to know where to apply certain rules in CSS or behavior in JS 
+                            Then again you don't need these stuff to apply style in elements
+                            You can always use the style attribute
+                        </p>
+
+                        <p style="color: grey;">
+                            Using the style attribute
+                        </p>
+                    </p>
+
+                    <p>Common QC question: What's the difference between </p>
+
+                 </div>
+                 
+             </div>
+         </div>
+         
+         <div class="container"></div>
+         <div class="container"></div>
+    </body>
+</html>
